@@ -22,28 +22,44 @@ int addScore(int dice[]){
 	return total;
 }
 
-/* Searches for 3 or 4 of a kind */
-int xOfaKind(int dice[]){
-	int i, j, x = 0;
-	int buffer;
-	
-	//need to check for three of a kind
-	
-	if(x == 3){			//three of a kind
-		return 10;
-	}else if(x == 4){	//four of a kind
-		return 15;
-	}else if(x == 5){	//five of a kind
-		return 20;
-	}else if(x == 6){	//yahtzee!
-		return 50;
+/* Adds the user's name */
+void inputName(char *name){
+	printf("Name>");
+	scanf("%s", name);
+}
+
+/* Game menu */
+void gameMenu(char *c){
+	if(!strcmp("roll", c)){
+		playerRoll();
 	}else{
-		return 0;
+		printf("Not an option.\n\n");
 	}
 }
 
-/* Adds the user's name */
-void inputName(char *name){
-	printf("Input name>");
-	scanf("%s", name);
+void playerRoll(void){
+	/* HUMAN ROLLING SCRIPT */
+	printf("\n");
+	for(i = 0; i < 6; i++){
+		roll[i] = rollDice();
+		printf("Roll #%d:\t%d\n", i+1, roll[i]);
+	}
+	
+	human.rolls++;
+	human.score += addScore(roll);
+	printf("\nYour Score:\t%d\n", human.score);
+	/* END THE HUMAN ROLLING */
+	
+	/* CPU ROLLING */
+	printf("\n");
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 6; j++){
+			roll[j] = rollDice();
+			printf("Roll #%d:\t%d\n", j+1, roll[j]);
+		}
+		cpu[i].rolls++;
+		cpu[i].score += addScore(roll);
+		printf("\n%s Score:\t%d\n\n", cpu[i].name, cpu[i].score);
+	}
+	/* END CPU ROLLING */
 }

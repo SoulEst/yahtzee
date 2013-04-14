@@ -5,5 +5,6 @@
 
 int rollDice();
 int addScore(int[]);
-int xOfaKind(int[]);
 void inputName(char*);
+void gameMenu(char*);
+void playerRoll();
