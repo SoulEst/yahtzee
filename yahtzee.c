@@ -3,31 +3,48 @@
 struct player{	//player structure
 	int score;
 	int order;
+	int position;
 	char name[25];
 };
 
-struct player human;
+struct player players[4];
 
 int main(void){
+	int i, j, roll[6];
+	char *choice;	
 	srand(time(NULL));	//used for random numbers
 	
+	/* Get all the names */
+	printf("Input your name:\n");
 	inputName(human.name);
 	
-	printf("Name is: %s\n\n", human.name);
-	
-	int i, roll[6];
-	//main menu goes here
-	//one to set the name
-	//one to choose how many players
-	//one to player the game
-	//one to exit
-	for(i = 0; i < 6; i++){
-		roll[i] = rollDice();
-		printf("Roll #%d: %d\n", i+1, roll[i]);
+	for(i = 0; i < 3; i++){	//this gets the user to input the names of the opponents
+		printf("Input opponent #%d:\n", i+1);
+		inputName(cpu[i].name);
 	}
 	
-	human.score += addScore(roll);
-	printf("\nScore:\t%d\n", human.score);
+	printf("\nYour name:\t%s\n", players[0].name);	//0 will always be human
+	for(i = 1; i <= 3; i++){	//this will print all the names of the opponents
+		printf("Opponents:\t%s\n", players[i].name);
+	}
+	/* End all the name business */
+	
+	//get actions go here
+	//"roll" will roll the dice
+	//"score" will show the scores, and how many rolls are left
+	while(1){
+		printf(">");
+		scanf("%s", choice);
+		if(!strcmp("exit", choice)){
+			break;
+		}else if(!strcmp("score", choice)){	//arrange the leaderboard
+
+			//need to organize the scoreboard
+
+		}else{
+			gameMenu(choice);
+		}
+	}
 	
 	return 0;
 }
