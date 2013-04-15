@@ -23,7 +23,8 @@ int main(void){
 	//one to exit
 	for(i = 0; i < 6; i++){
 		roll[i] = rollDice();
-		printf("Roll #%d: %d\n", i+1, roll[i]);
+		printf("Roll #%d: ", i+1);
+		die(roll[i]);
 	}
 	
 	human.score += addScore(roll);

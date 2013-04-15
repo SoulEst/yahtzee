@@ -7,3 +7,4 @@ int rollDice();
 int addScore(int[]);
 int xOfaKind(int[]);
 void inputName(char*);
+void die (int);
