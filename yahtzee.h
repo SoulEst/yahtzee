@@ -8,3 +8,4 @@ int addScore(int[]);
 void inputName(char*);
 void gameMenu(char*);
 void playerRoll(int *);
+void di(int);

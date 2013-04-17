@@ -18,15 +18,6 @@ void inputName(char *name){
 	scanf("%s", name);
 }
 
-/* Game menu 
-void gameMenu(char *c){
-	if(!strcmp("roll", c)){
-		playerRoll();
-	}else{
-		printf("Not an option.\n\n");
-	}
-}	*/
-
 /* Rolls the dice and adds the score up */
 void playerRoll(int *score){
 	int i, total = 0;
