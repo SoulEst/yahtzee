@@ -6,4 +6,4 @@ CFLAGS=-Wall -W -pedantic
 
 # The default recipe for make
 all:
-	$(CC) $(CFLAGS) yahtzee.c functions.c -o yahtzee
+	$(CC) $(CFLAGS) yahtzee.c functions.c dice.c -o yahtzee

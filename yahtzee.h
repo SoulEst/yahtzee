@@ -7,4 +7,5 @@ int rollDice();
 int addScore(int[]);
 void inputName(char*);
 void gameMenu(char*);
-void playerRoll();
+void playerRoll(int *);
+void di(int);
