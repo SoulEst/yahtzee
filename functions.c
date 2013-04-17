@@ -36,6 +36,7 @@ void playerRoll(int *score){
 	for(i = 0; i < 6; i++){
 		roll[i] = rollDice();
 		printf("Roll #%d:\t%d\n", i+1, roll[i]);
+		die(roll[i]);
 		*score += roll[i];
 		total += roll[i];
 	}
