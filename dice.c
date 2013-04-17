@@ -12,12 +12,12 @@ struct dice{
 struct dice pips;
 
 void die(int number){
-	pips.one=	".~~~~~~.\n|      |\n|  ()  |\n|      |\n'~~~~~~'\n";
-	pips.two=	".~~~~~~.\n|()    |\n|      |\n|    ()|\n'~~~~~~'\n";
-	pips.three=	".~~~~~~.\n|()    |\n|  ()  |\n|    ()|\n'~~~~~~'\n";
-	pips.four=	".~~~~~~.\n|()  ()|\n|      |\n|()  ()|\n'~~~~~~'\n";
-	pips.five=	".~~~~~~.\n|()  ()|\n|  ()  |\n|()  ()|\n'~~~~~~'\n";
-	pips.six=	".~~~~~~.\n|()  ()|\n|()  ()|\n|()  ()|\n'~~~~~~'\n";
+	pips.one=	"\t\t.~~~~~~.\n\t\t|      |\n\t\t|  ()  |\n\t\t|      |\n\t\t'~~~~~~'\n";
+	pips.two=	"\t\t.~~~~~~.\n\t\t|()    |\n\t\t|      |\n\t\t|    ()|\n\t\t'~~~~~~'\n";
+	pips.three=	"\t\t.~~~~~~.\n\t\t|()    |\n\t\t|  ()  |\n\t\t|    ()|\n\t\t'~~~~~~'\n";
+	pips.four=	"\t\t.~~~~~~.\n\t\t|()  ()|\n\t\t|      |\n\t\t|()  ()|\n\t\t'~~~~~~'\n";
+	pips.five=	"\t\t.~~~~~~.\n\t\t|()  ()|\n\t\t|  ()  |\n\t\t|()  ()|\n\t\t'~~~~~~'\n";
+	pips.six=	"\t\t.~~~~~~.\n\t\t|()  ()|\n\t\t|()  ()|\n\t\t|()  ()|\n\t\t'~~~~~~'\n";
 	
 	switch (number){
 		case 1:
